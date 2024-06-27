@@ -311,10 +311,10 @@ body.dark-theme {
 }
 
 .bitch {
-  width: 140px;
+  width: 80px;
   position: relative;
-  top: 3rem;
-  left: -13rem;
+  top: 2rem;
+  right: 10rem;
 
 }
 
@@ -431,11 +431,10 @@ img:hover {
   display: flex;
   justify-content: center;
   align-items:center;
-  justify-self: flex-end;
+  justify-self:center;
   transform: translateX(1.5rem);
   border-radius: 1.5rem;
- 
-
+  
 }
 
 .home__social {
