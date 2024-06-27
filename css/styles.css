@@ -245,6 +245,21 @@ body.dark-theme {
   cursor: pointer;
 }
 
+
+.home__img-bg {
+  background-color: var(--first-color);
+  width: 300px;
+  height: 320px;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  justify-self:center;
+  transform: translateX(0);
+  border-radius: 1.5rem;
+  
+}
+
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -307,7 +322,7 @@ body.dark-theme {
   row-gap: 2.5rem;
   left: 3rem;
   overflow-wrap: break-word;
-  top: 5rem;
+  top: 6rem;
 }
 
 .bitch {
@@ -423,19 +438,7 @@ img:hover {
 }
 
 
-.home__img-bg {
-  background-color: var(--first-color);
-  width: 300px;
-  height: 320px;
-  padding-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  justify-self:center;
-  transform: translateX(1.5rem);
-  border-radius: 1.5rem;
-  
-}
+
 
 .home__social {
   position: absolute;
@@ -1101,13 +1104,24 @@ img:hover {
   }
 
   .home__container {
-    padding-top: 6rem;
+    padding-top: 6.7rem;
     grid-template-columns: 1fr max-content;
     align-items: center;
+    
   }
   .home__img-bg {
+    background-color: var(--first-color);
+    width: 300px;
+    height: 320px;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    justify-self:center;
+    border-radius: 1.5rem;
     order: 1;
-    transform: translate(1.5rem, -6rem);
+    position: relative;
+    top: -12rem;
   }
   .home__data {
     padding: 0 0 3rem 6rem;
