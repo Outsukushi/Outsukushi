@@ -1,0 +1,519 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+
+        <!-------------icons----------->
+
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== SWIPER CSS ===============--> 
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="css/styles.css">
+
+        <link rel="stylesheet" href="scss/base/base.scss">
+
+        <title>Outsukushi</title>
+        
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <i class="ri-music-2-fill"></i></i> Outsukushi
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">Home</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#specs" class="nav__link">Specs</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#featured" class="nav__link">accecories</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#products" class="nav__link">Products</a>
+                           
+                        </li>
+                      
+                        
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x' ></i>
+                    </div>
+                    
+                </div>
+                <img class="bitch" src="images/bitch.png" alt="">
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+                    <div class="nav__shop" id="cart-shop">
+                        <i class='bx bx-shopping-bag' ></i>
+                    </div>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-grid-alt' ></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== CART ====================-->
+        <div  class="cart" id="cart">
+            <i class='bx bx-x cart__close' id="cart-close"></i>
+
+            <h2 class="cart__title-center">My Cart</h2>
+
+            <div class="cart__container">
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="assets/img/featured1.png" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">nigger</h3>
+                        <span class="cart__price">$50</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">farat</h3>
+                        <span class="cart__price">$85</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">floid</h3>
+                        <span class="cart__price">$0</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="cart__prices">
+                <span class="cart__prices-item">3 items</span>
+                <span class="cart__prices-total">$2880</span>
+            </div>
+        </div>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="hidden" id="home">
+                <div id="fullscreenElement" class="fullscreen" onclick="closeFullscreen()">
+                    <img id="fullscreenImage" src="" alt="Fullscreen Image">
+                  </div>
+                  
+                <div class="home__container container grid" >             
+                    <div class="home__img-bg" >
+                        <div class="slider-wrapper">
+                           
+                            <div class="slider"  > 
+                                <img id="slide-1" src="images/kir.jpg" onclick="openFullscreen(this)" >
+                               
+                                <img id="slide-2" src="images/piano 2.jpg" onclick="openFullscreen(this)" >
+                                
+                                <img id="slide-3" src="images/piano 1.jpg" onclick="openFullscreen(this)" >
+                               
+                                <img id="slide-4" src="images/بداز.jpg" onclick="openFullscreen(this)">
+                                
+                                
+                            </div>
+                            <div class="slider-nav">
+                                <a href="#slide-1"></a>
+                                <a href="#slide-2"></a>
+                                <a href="#slide-3"></a>
+                                <a href="#slide-4"></a>
+                            </div>
+                           
+                        </div>
+                    </div>
+    
+                    <div class="home__social">
+                        <a href="https://t.me/PN_ALO" target="_blank" class="home__social-link">
+                            Telegram
+                        </a>
+                        <a href="" target="_blank" class="home__social-link">
+                            instagram
+                        </a>
+                       
+                    </div>
+    
+                    <div class="home__data">
+                        <h1 class="home__title">Outsukushi <br> </h1>
+                        <p class="home__description">
+                            keyboard : graded hammer action fully weighted_3X<br>
+                            material of keyboards : artificial ebony and ivory<br>
+                            body material : walnut and plywood<br>
+                            color : carlic brown_anti scrach_brillux germany<br>
+                            connection ports : usb_aux_midi_headphone<br>
+                            sound : Bosendorfer imperial<br>
+                            polyphony : 192<br>
+                            touch sensitivity : 5 state of<br>
+                            pedal : sustain_sostenuto_soft<br>
+                            number of octave : 7.5_88<br>
+                            speakers : 4 manitor<br>
+                            weight : 90 kg<br>
+                            size : 192_153_67<br>
+                            style : console<br>
+                        </p>
+                        <span class="home__price">
+                            by agreement</span>
+
+                        <div class="home__btns">
+                           
+
+                            <button class="button home__button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-----------------specs-------------------->
+
+
+            <section class="hidden" class="specs section grid" id="specs">
+                <h2 class="section__title section__title-gradient">Specs</h2>
+
+                <div class="specs__container container grid">
+                    <div class="specs__content grid">
+                        <div class="specs__data">
+                            <i class="ri-palette-fill"></i>
+                            <h3 class="specs__title">Color</h3>
+                            <span class="specs__subtitle">brown german</span>
+                        </div>
+    
+                        <div class="specs__data">
+                            <i class="ri-hammer-fill"></i>
+                            <h3 class="specs__title">wood material</h3>
+                            <span class="specs__subtitle">walnut</span>
+                        </div>
+    
+                        <div class="specs__data">
+                            <i class="ri-music-fill"></i>
+                            <h3 class="specs__title">keys</h3>
+                            <span class="specs__subtitle">somthing special</span>
+                        </div>
+    
+                        <div class="specs__data">
+                            <i class="ri-sensor-fill"></i>
+                            <h3 class="specs__title">sensor</h3>
+                            <span class="specs__subtitle">None</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <img src="" alt="" class="specs__img">
+                    </div>
+                </div>
+            </section>
+
+
+
+           
+
+
+
+
+            <!--==================== accecories ====================-->
+            <section class="hidden" class="featured section container" id="featured">
+                <h2 class="section__title">
+                    accecories
+                </h2>
+
+                <div class="featured__container grid">
+                    <article class="featured__card">
+                        <span class="featured__tag">Sale</span>
+
+                        <img src="images/eyboardAccessories.jpg" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">headphones and other</h3>
+                            
+                        </div>
+
+                        <button class="button featured__button">CHECK</button>
+                    </article>
+
+                    <article class="featured__card">
+                        <span class="featured__tag">Sale</span>
+
+                        <img src="images/keyboard.jpg" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">piano keys</h3>
+                            
+                        </div>
+
+                        <button class="button featured__button">CHECK</button>
+                    </article>
+
+                    <article class="featured__card">
+                        <span class="featured__tag">Sale</span>
+
+                        <img src="images/Millers-Blog-Thumbnail.png" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">chair and other</h3>
+                            
+                        </div>
+
+                        <button class="button featured__button">check</button>
+                    </article>
+                </div>
+            </section>
+
+            <!--==================== toturial ====================-->
+
+         
+        
+
+            <!--==================== PRODUCTS ====================-->
+            <section class="hidden" class="products section container" id="products">
+                <h2 class="section__title">
+                    Products
+                </h2>
+
+                <div class="products__container grid">
+                    <article class="products__card">
+                        <img src="images/ugl.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">ali afshari</h3>
+                        <span class="products__price">$1</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                            <li><a href="pages/ali afshar.html">CHECK </a></li>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="images/piano 2.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title"> i dont know</h3>
+                        <span class="products__price">$1350</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                            <p>CHECK</p>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="images/piano 1.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">bitch</h3>
+                        <span class="products__price">$870</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                            <p>CHECK</p>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="images/kir.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">ampa</h3>
+                        <span class="products__price">$650</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                            <p>CHECK</p>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="images/piano 2.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">negro</h3>
+                        <span class="products__price">$950</span>
+                        
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                            <p>CHECK</p>
+                        </button>
+                    </article>
+
+
+
+
+
+                    <article class="products__card">
+                        <img src="images/ugl.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">Duchen negro  </h3>
+                        <span class="products__price">$95</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                            <p>CHECK</p>
+                        </button>
+                    </article>
+
+
+
+                    
+                </div>
+            </section>
+            
+            <!--==================== NEWSLETTER ====================-->
+            <section class="newsletter section container">
+                <div class="newsletter__bg grid">
+                    <div>
+                        <h2 class="newsletter__title">creat account for safe buying<br> Sign in</h2>
+                        <p class="newsletter__description">
+                            we make sure you get the best quality
+                        </p>
+                    </div>
+
+                    <form action="" class="newsletter__subscribe">
+                        <input type="email" placeholder="Enter your email" class="newsletter__input">
+                        <button class="button">
+                            SUBSCRIBE
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Our information</h3>
+
+                    <ul class="footer__list">
+                        <li>1234 - Peru</li>
+                        <li>La Libertad 43210</li>
+                        <li>123-456-789</li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">About Us</h3>
+
+                    <ul class="footer__links">
+                        
+                        <li>
+                            <a href="#" class="footer__link">Customer Support</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Copy Right</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+
+                    <ul class="footer__social">
+                        <a href="https://t.me/PN_ALO" target="_blank" class="footer__social-link">
+                            <i class="ri-telegram-fill"></i>
+                        </a>
+
+                        <a href="" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+
+                    </ul>
+                </div>
+            </div>
+
+            <span class="footer__copy">&#169; Outsukushi all rights reserved</span>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+        </a>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="javascript/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="javascript/main.js">
+        </script>
+    </body>
+</html>
