@@ -509,34 +509,6 @@ body.dark-theme {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 img:hover {
   animation: scaleUp 0.5s forwards;
 }
@@ -549,6 +521,11 @@ img:hover {
   to {
     transform: scale(1.05);
   }
+}
+
+
+.home__description{
+  font-size: 6vw;
 }
 
 
@@ -1123,6 +1100,8 @@ img:hover {
 /* For small devices */
 @media screen and (max-width: 320px) {
 
+ 
+
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -1162,6 +1141,8 @@ img:hover {
 /* For medium devices */
 @media screen and (min-width: 576px) {
 
+  
+
   .featured__container {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
@@ -1174,6 +1155,8 @@ img:hover {
   
   }
 
+
+ 
  
   
  
@@ -1184,6 +1167,8 @@ img:hover {
 }
 
 @media screen and (min-width: 767px) {
+
+  
 
   .section {
     padding: 8rem 0 1rem;
@@ -1285,6 +1270,14 @@ img:hover {
 
 
 @media screen and (min-width: 800px) {
+
+
+  .home__description{
+    font-size: 4vw;
+  }
+  
+
+  
 
   .section__title {
     font-size: var(--h2-font-size);
