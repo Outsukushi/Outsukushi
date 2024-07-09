@@ -176,34 +176,35 @@
         <main class="main">
             <!--==================== HOME ====================-->
             <section class="hidden" id="home">
-                <div id="fullscreenElement" class="fullscreen" onclick="closeFullscreen()">
-                    <img id="fullscreenImage" src="" alt="Fullscreen Image">
-                  </div>
-                  
-                <div class="home__container container grid" >             
-                    <div class="home__img-bg" >
-                        <div class="slider-wrapper">
-                           
-                            <div class="slider"  > 
-                                <img id="slide-1" src="images/kir.jpg" onclick="openFullscreen(this)" >
-                               
-                                <img id="slide-2" src="images/piano 2.jpg" onclick="openFullscreen(this)" >
-                                
-                                <img id="slide-3" src="images/piano 1.jpg" onclick="openFullscreen(this)" >
-                               
-                                <img id="slide-4" src="images/بداز.jpg" onclick="openFullscreen(this)">
-                                
-                                
-                            </div>
-                            <div class="slider-nav">
-                                <a href="#slide-1"></a>
-                                <a href="#slide-2"></a>
-                                <a href="#slide-3"></a>
-                                <a href="#slide-4"></a>
-                            </div>
-                           
-                        </div>
+                
                     </div>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide">
+                            <img src="images/kir.jpg" alt=""> 
+                            <div class="title">
+                              <button class="fullscreen-btn">Fullscreen</button>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="images/piano 1.jpg" alt="">
+                            <div class="title">
+                              <button class="fullscreen-btn">Fullscreen</button>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="images/bitch.png" alt="">
+                            <div class="title">
+                              <button class="fullscreen-btn">Fullscreen</button>
+                            </div>
+                          </div>
+                          <!-- Add more slides as needed -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                      
     
                     <div class="home__social">
                         <a href="https://t.me/PN_ALO" target="_blank" class="home__social-link">
@@ -233,13 +234,12 @@
                             size : 192_153_67<br>
                             style : console<br>
                         </p>
-                        <span class="home__price">
-                            by agreement</span>
+                        
 
                         <div class="home__btns">
                            
 
-                            <button class="button home__button">ADD TO CART</button>
+                         
                         </div>
                     </div>
                 </div>
@@ -511,6 +511,8 @@
 
         <!--=============== SWIPER JS ===============-->
         <script src="javascript/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
         <!--=============== MAIN JS ===============-->
         <script src="javascript/main.js">

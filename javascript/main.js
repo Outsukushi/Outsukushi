@@ -166,22 +166,96 @@ hiddenElements.forEach((el)=> observer.observe(el));
 
 
 
+var swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    initialSlide:2,
+    speed:600,
+    preventClicks: true,
+    slidesPerview: "auto",
+    coverflowEffect:{
+        rotate:0,
+        stretch:80,
+        depth:350,
+        modifer:1,
+        slideshadows:true,
 
-// Function to open the image in fullscreen
-function openFullscreen(imgElement) {
-    var fullscreenElement = document.getElementById('fullscreenElement');
-    var fullscreenImage = document.getElementById('fullscreenImage');
-    fullscreenImage.src = imgElement.src; // Set the source of the fullscreen image
-    fullscreenElement.style.display = 'block'; // Show the fullscreen container
-  }
+    },
+    on: {
+        click(event){
+            swiper.slideTo(this.clickIndex);
+        },
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+
+});
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.fullscreen-btn');
+    const images = document.querySelectorAll('.swiper-slide img');
+    let currentIndex = 0;
   
-  // Function to close the fullscreen view
-  function closeFullscreen() {
-    var fullscreenElement = document.getElementById('fullscreenElement');
-    fullscreenElement.style.display = 'none'; // Hide the fullscreen container
-  }
-
-
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', function() {
+        currentIndex = index;
+        showFullscreenImage(images[currentIndex]);
+      });
+    });
+  
+    function showFullscreenImage(img) {
+      const fullscreenDiv = document.createElement('div');
+      fullscreenDiv.classList.add('fullscreen');
+      const fullscreenImg = document.createElement('img');
+      fullscreenImg.src = img.src;
+      fullscreenDiv.appendChild(fullscreenImg);
+  
+      const prevBtn = document.createElement('button');
+      prevBtn.classList.add('nav-btn', 'prev-btn');
+      prevBtn.textContent = 'Previous';
+      fullscreenDiv.appendChild(prevBtn);
+  
+      const nextBtn = document.createElement('button');
+      nextBtn.classList.add('nav-btn', 'next-btn');
+      nextBtn.textContent = 'Next';
+      fullscreenDiv.appendChild(nextBtn);
+  
+      const closeBtn = document.createElement('button');
+      closeBtn.classList.add('close-btn');
+      closeBtn.textContent = 'X';
+      fullscreenDiv.appendChild(closeBtn);
+  
+      document.body.appendChild(fullscreenDiv);
+  
+      prevBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        fullscreenImg.src = images[currentIndex].src;
+      });
+  
+      nextBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        fullscreenImg.src = images[currentIndex].src;
+      });
+  
+      closeBtn.addEventListener('click', function() {
+        document.body.removeChild(fullscreenDiv);
+      });
+  
+      fullscreenDiv.addEventListener('click', function(e) {
+        if (e.target === fullscreenDiv) {
+          document.body.removeChild(fullscreenDiv);
+        }
+      });
+    }
+  });
+  
 
   
 
