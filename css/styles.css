@@ -621,7 +621,35 @@ img:hover {
 
 /*================specs=========================*/
 
+.box input{
+  width: 0;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  transition: 0.8s;
+  background: transparent;
+}
 
+.box:hover input{
+  width: 300px;
+}
+
+.ri-search-line{
+  color: rgb(255, 140, 0);
+  align-items: center;
+}
+
+
+.box{
+  height: 24px;
+  display: flex;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: rgb(255, 255, 255);
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 0 10px 25px black;
+}
 
 
 .specs__container {
@@ -1103,7 +1131,6 @@ img:hover {
 /* For small devices */
 @media screen and (max-width: 320px) {
 
- 
 
   .container {
     margin-left: var(--mb-1);
