@@ -253,13 +253,16 @@ body.dark-theme {
 .nav__btns {
   display: flex;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 0.7rem;
+  
 }
 
 .nav__toggle, 
 .nav__shop {
   font-size: 1.25rem;
   cursor: pointer;
+  position: relative;
+  left: -2rem;
 }
 
 
@@ -409,7 +412,7 @@ body.dark-theme {
     height: 100%;
     padding: 50px 0;
     position: relative;
-    top: 2.6rem;
+    top: 2.9rem;
  
 }
 
@@ -641,7 +644,7 @@ img:hover {
 
 
 .box{
-  height: 24px;
+  height: 17px;
   display: flex;
   cursor: pointer;
   padding: 10px 20px;
@@ -649,6 +652,9 @@ img:hover {
   border-radius: 30px;
   align-items: center;
   box-shadow: 0 10px 25px black;
+  position: relative;
+  left: -1rem;
+  top: 1.5rem;
 }
 
 
@@ -1130,6 +1136,8 @@ img:hover {
 
 /* For small devices */
 @media screen and (max-width: 320px) {
+
+ 
 
 
   .container {
