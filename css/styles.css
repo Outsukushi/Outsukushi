@@ -234,6 +234,12 @@ body.dark-theme {
   color: var(--title-color);
 }
 
+.nav__close {
+  position: relative;
+  left: 1rem;
+
+}
+
 .nav__logo {
   text-transform: uppercase;
   font-weight: var(--font-bold);
