@@ -533,9 +533,6 @@ img:hover {
 }
 
 
-.home__description{
-  font-size: 6vw;
-}
 
 
 .home__social {
@@ -572,6 +569,7 @@ img:hover {
   position: relative;
   left: 1px;
   top: 3rem;
+  font-size: 5vw;
 }
 
 .home__description > p {
@@ -1315,11 +1313,17 @@ img:hover {
 
 @media screen and (min-width: 800px) {
 
-
-  .home__description{
-    font-size: 2.5vw;
+  .home__description {
+    margin-bottom: var(--mb-1-5);
+    container-type: inline-size;
+    width: 800px;
+    position: relative;
+    left: 1px;
+    top: 3rem;
+    font-size: 30px;
   }
-  
+
+
 
   
 
