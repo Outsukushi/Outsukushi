@@ -218,6 +218,19 @@ body.dark-theme {
   
 }
 
+.add {
+  display: inline-block;
+  padding: 3px 7px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: relative;
+  
+}
+
 
 
 .nav {
@@ -571,6 +584,9 @@ img:hover {
   top: 3rem;
   font-size: 5vw;
 }
+
+
+
 
 .home__description > p {
   font-size: 19cqi;
@@ -1141,9 +1157,9 @@ img:hover {
 /* For small devices */
 @media screen and (max-width: 320px) {
 
- 
+  
 
-
+  
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -1183,6 +1199,7 @@ img:hover {
 /* For medium devices */
 @media screen and (min-width: 576px) {
 
+ 
   
 
   .featured__container {
@@ -1322,6 +1339,8 @@ img:hover {
     top: 3rem;
     font-size: 30px;
   }
+
+  
 
 
 
