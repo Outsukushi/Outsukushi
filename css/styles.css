@@ -651,6 +651,7 @@ img:hover {
   outline: none;
   border: none;
   font-weight: 500;
+  font-size: 13px;
   transition: 0.8s;
   background: transparent;
 }
@@ -661,7 +662,9 @@ img:hover {
 
 .ri-search-line{
   color: rgb(255, 140, 0);
-  align-items: center;
+  position: relative;
+  left: -1rem;
+
 }
 
 
