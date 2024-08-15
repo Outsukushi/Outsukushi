@@ -255,10 +255,47 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-  
+
+
+
+
+
 
   
 
+  document.getElementById('search').addEventListener('input', function() {
+    let filter = this.value.toLowerCase();
+    let products = document.querySelectorAll('.products__card');
+    let searchResults = document.getElementById('searchResults');
+    searchResults.innerHTML = ''; // Clear previous results
 
+    if (filter) {
+        searchResults.style.display = 'block'; // Show the search results box
+    } else {
+        searchResults.style.display = 'none'; // Hide the search results box
+    }
 
+    products.forEach(function(product) {
+        let title = product.querySelector('.products__title').textContent.toLowerCase();
+        if (title.includes(filter)) {
+            // Add matching product names to the search results
+            let resultItem = document.createElement('div');
+            resultItem.textContent = product.querySelector('.products__title').textContent;
+            resultItem.classList.add('search-result-item');
+            resultItem.addEventListener('click', function() {
+                // Remove highlight from all products
+                products.forEach(p => p.classList.remove('highlight'));
+                // Scroll to the product and add highlight
+                product.scrollIntoView({ behavior: 'smooth' });
+                product.classList.add('highlight');
+            });
+            searchResults.appendChild(resultItem);
+        }
+    });
+
+    // Hide the search results box if no products match the filter
+    if (!searchResults.querySelector('.search-result-item')) {
+        searchResults.style.display = 'none';
+    }
+});
 

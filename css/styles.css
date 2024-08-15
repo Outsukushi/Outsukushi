@@ -8,13 +8,13 @@
   /*========== Colors ==========*/
   
   
-  --first-color: hsl(192, 32%, 72%);
+  --first-color: hsl(192, 28%, 54%);
   --button-color: hsl(0, 3%, 14%);
   --button-color-alt: hsl(0, 4%, 15%);
-  --title-color: hsl(44, 100%, 47%);
+  --title-color: hsl(44, 100%, 36%);
   --text-color: hsl(0, 0%, 45%);
-  --text-color-light: hsl(0, 0%, 71%);
-  --body-color: hsl(0, 0%, 100%);
+  --text-color-light: hsl(0, 0%, 9%);
+  --body-color: hsl(0, 0%, 85%);
   --container-color: #292828;
   --border-color: hsl(0, 0%, 35%);
   
@@ -264,6 +264,7 @@ body.dark-theme {
   position: relative;
   left: 1rem;
   font-size: small;
+  top: -1rem;
 }
 
 .nav__logo-icon {
@@ -273,16 +274,17 @@ body.dark-theme {
 .nav__btns {
   display: flex;
   align-items: center;
-  column-gap: 0.7rem;
-  
+  column-gap: 1.8rem;
 }
+
+
 
 .nav__toggle, 
 .nav__shop {
   font-size: 1.25rem;
   cursor: pointer;
   position: relative;
-  left: -2rem;
+  left: -1rem;
 }
 
 
@@ -351,6 +353,33 @@ body.dark-theme {
   position: relative;
   top: 0.7rem;
 }
+
+
+#searchResults {
+  margin-top: 10px;
+  max-height: 130px;
+  width: 200px; 
+  overflow-y: auto;
+  border: 1px solid #a3a3a3;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute; 
+  top: 3rem; 
+  right: 0;
+  border-radius: 1rem;
+}
+
+
+
+.search-result-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background-color: #f0f0f0;
+}
+
 
 
 
@@ -585,6 +614,7 @@ img:hover {
   left: 1px;
   top: 3rem;
   font-size: 5vw;
+  font-family:'Times New Roman', Times, serif;
 }
 
 
@@ -604,49 +634,8 @@ img:hover {
 
 
 
-
-
-
-/*===========toturial===============*/
-
-/*=============== BUTTONS ===============*/
-.button {
-  display: inline-block;
-  background-color: var(--button-color);
-  color: #FFF;
-  padding: 1.25rem 2rem;
-  font-weight: var(--font-medium);
-  transition: .3s;
-}
-
-.button:hover {
-  background-color: var(--button-color-alt);
-}
-
-.button--gray {
-  background-color: hsl(0, 0%, 75%);
-  color: var(--title-color);
-}
-
-.button--gray:hover {
-  background-color: hsl(0, 0%, 63%);
-}
-
-.button--small {
-  padding: 1rem 1.5rem;
-}
-
-
-
-
-
-
-
-
-
 /*================specs=========================*/
-
-.box input{
+.box input {
   width: 0;
   outline: none;
   border: none;
@@ -657,7 +646,7 @@ img:hover {
 }
 
 .box:hover input{
-  width: 85px;
+  width: 79px;
 }
 
 .ri-search-line{
@@ -669,7 +658,7 @@ img:hover {
 
 
 .box{
-  height: 17px;
+  height: 12px;
   display: flex;
   cursor: pointer;
   padding: 10px 20px;
@@ -678,9 +667,11 @@ img:hover {
   align-items: center;
   box-shadow: 0 10px 25px black;
   position: relative;
-  left: -1rem;
-  top: 1.5rem;
+  left: -10rem;
+  top: 1.1rem;
 }
+
+
 
 
 .specs__container {
@@ -1334,6 +1325,20 @@ img:hover {
 
 
 @media screen and (min-width: 800px) {
+
+  #searchResults {
+    margin-top: 10px;
+    max-height: 130px;
+    width: 222px; /* عرض ثابت */
+    overflow-y: auto;
+    border: 1px solid #a3a3a3;
+    padding: 10px;
+    background-color: #fff;
+    position: absolute; /* موقعیت ثابت */
+    top: 3rem; /* تنظیم موقعیت */
+    right: 19rem;
+    border-radius: 1rem;
+  }
 
   .home__description {
     margin-bottom: var(--mb-1-5);
