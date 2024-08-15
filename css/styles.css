@@ -228,7 +228,7 @@ body.dark-theme {
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   position: relative;
-  font-size: 12px;
+  font-size: 10px;
   
 }
 
@@ -274,7 +274,7 @@ body.dark-theme {
 .nav__btns {
   display: flex;
   align-items: center;
-  column-gap: 1.8rem;
+  column-gap: 1.2rem;
 }
 
 
@@ -284,7 +284,7 @@ body.dark-theme {
   font-size: 1.25rem;
   cursor: pointer;
   position: relative;
-  left: -1rem;
+  left: -6.8rem;
 }
 
 
@@ -306,7 +306,7 @@ body.dark-theme {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 2rem;
+  row-gap: 3rem;
 }
 
 .nav__link {
@@ -1246,6 +1246,8 @@ img:hover {
   .nav__list {
     flex-direction: row;
     column-gap: 2.5rem;
+    position: relative;
+    top: -1rem;
   }
   .nav__link {
     text-transform: initial;
